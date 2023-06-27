@@ -5,16 +5,18 @@ namespace YSSWebapp.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        private readonly homePageDbContext _db;
+        public IEnumerable<homePage> about { get; set; } 
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(homePageDbContext db)
         {
-            _logger = logger;
+            _db = db;
         }
 
         public void OnGet()
         {
-
+            about = _db.HomePage;
         }
+        
     }
 }

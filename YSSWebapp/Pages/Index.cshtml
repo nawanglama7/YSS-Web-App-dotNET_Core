@@ -50,6 +50,11 @@
                 </div>
                 <div class="align-self-center justify-content-evenly" style="text-align:justify">
                     <p>
+                        @foreach(var obj in Model.about)
+                        {
+                            @obj.About;
+                        }
+                        @*<asp:DynamicField DataField="_About" />
                         YOUNG SHUTLLERS OF SIKKIM is an oldest badminton club of
                         Sikkim established in 2001 by very few members. The club's aim and objectives was to
                         promote badminton in the state of Sikkim. From the establishment of the club till now
@@ -58,7 +63,7 @@
                         worth since the birth of the club. The elaborated achievements list have been provided
                         in the members details. We the club still targets to pursue and thrive to attain our aims
                         and objectives. We believe that we will someday produce a champion who will be representing
-                        our country.
+                        our country.*@
                     </p>
                 </div>
             </div>
